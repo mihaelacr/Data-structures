@@ -1,5 +1,10 @@
 package own;
 
+/*
+ * Implementation of queues using arrays as an underlying data structure.
+ * Resizing and efficient space usage.
+ */
+
 public class Queue {
 
 	private int start;
@@ -56,7 +61,7 @@ public class Queue {
 				new_array[i - start] = q[i];
 		}
 		if (end < start) {
-			for (int j = 0; j < end; j ++) {
+			for (int j = 0; j < end; j++) {
 				new_array[i] = q[j];
 				i++;
 			}
