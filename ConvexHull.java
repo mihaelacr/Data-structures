@@ -141,12 +141,14 @@ public class ConvexHull {
 		Point p3 = new Point(-1, 1);
 		Point p4 = new Point(-1, -1);
 		Point p5 = new Point(0, 0);
-		Point[] points = new Point[5];
+		Point p6 = new Point(0, 1);
+		Point[] points = new Point[6];
 		points[0] = p1;
 		points[1] = p2;
 		points[2] = p3;
 		points[3] = p4;
 		points[4] = p5;
+		points[5] = p6;
 
 		// System.out.println(p3.getPolarAngle(p2));
 		// System.out.println(p5.getPolarAngle(p2));
