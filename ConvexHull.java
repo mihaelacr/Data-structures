@@ -62,6 +62,9 @@ public class ConvexHull {
 					// till the end are collinear
 					break;
 				else
+					// backtracked as much as possible,
+					// reached first two points
+					// which are in the convex hull, update i
 					i++;
 			}
 			convex_hull_index++;
