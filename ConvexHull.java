@@ -58,7 +58,8 @@ public class ConvexHull {
 				if (convex_hull_index > 1)
 					convex_hull_index--;
 				else if (i == n)
-					// all points are collinear
+					// points from the last point in the hull
+					// till the end are collinear
 					break;
 				else
 					i++;
