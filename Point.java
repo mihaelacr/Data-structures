@@ -13,8 +13,13 @@ public class Point implements Comparable<Point> {
 	public static boolean isCounterclockwise(Point a, Point b, Point c) {
 		double signed_area_doubled = (b.x - a.x) * (c.y - a.y) - (b.y - a.y)
 				* (c.x - a.x);
-		// System.out.println(signed_area_doubled);
 		return (signed_area_doubled > 0);
+	}
+
+	public static void printPoints(Point[] points) {
+		for (Point p : points) {
+			System.out.println(p);
+		}
 	}
 
 	protected void setComparatorPoint(Point p) {
