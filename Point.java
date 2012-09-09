@@ -1,5 +1,9 @@
 package own;
 
+/*
+ * Class that implements a point in the Euclidean space.
+ * 
+ */
 public class Point implements Comparable<Point> {
 	private double x;
 	private double y;
@@ -11,6 +15,7 @@ public class Point implements Comparable<Point> {
 	}
 
 	public static boolean isCounterclockwise(Point a, Point b, Point c) {
+		// determines if the angle formed by a -> b -> c is counterclockwise
 		double signed_area_doubled = (b.x - a.x) * (c.y - a.y) - (b.y - a.y)
 				* (c.x - a.x);
 		return (signed_area_doubled > 0);
@@ -30,8 +35,7 @@ public class Point implements Comparable<Point> {
 		return Math.sqrt(x * x + y * y);
 	}
 
-	// gets the polar angle between this point and origin
-	// TODO mihaelacr write more comments
+	// gets the polar angle between this point and origin of the plane
 	public double getPolarAngle() {
 		// java library requires swapped arguments
 		double arctan = Math.atan2(y, x);
@@ -43,7 +47,6 @@ public class Point implements Comparable<Point> {
 	public double getPolarAngle(Point p) {
 		double x_n = p.x - x;
 		double y_n = p.y - y;
-		// System.out.println(new Point(x_n, y_n).getPolarAngle());
 		return new Point(x_n, y_n).getPolarAngle();
 	}
 
@@ -63,6 +66,8 @@ public class Point implements Comparable<Point> {
 
 	@Override
 	public int compareTo(Point p) {
+		// compares two points in the plane according to the polar angle they
+		// form with the comparator point of this object
 		// if a comparator point is not provided, the default is the origin
 		// of the plane
 		if (comparatorPoint == null)

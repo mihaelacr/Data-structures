@@ -11,7 +11,6 @@ public class GreatestDistance {
 	Point[] points;
 
 	public GreatestDistance(Point[] points) {
-		// readPoints();
 		this.points = points;
 	}
 
