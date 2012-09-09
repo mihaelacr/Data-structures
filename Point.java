@@ -47,6 +47,10 @@ public class Point implements Comparable<Point> {
 		return new Point(x_n, y_n).getPolarAngle();
 	}
 
+	public double getEuclideanDistance(Point p) {
+		return Math.sqrt(Math.pow(p.x - x, 2) + Math.pow(p.y - y, 2));
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (o instanceof Point) {
