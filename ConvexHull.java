@@ -88,20 +88,4 @@ public class ConvexHull {
 		points[index2] = aux;
 	}
 
-	public static void main(String[] args) {
-		Point p1 = new Point(1, 1);
-		Point p2 = new Point(1, -1);
-		Point p3 = new Point(-1, 1);
-		Point p4 = new Point(-1, -1);
-		Point p5 = new Point(0, 0);
-		Point p6 = new Point(0, 1);
-		Point[] points = new Point[6];
-		points[0] = p1;
-		points[1] = p2;
-		points[2] = p3;
-		points[3] = p4;
-		points[4] = p5;
-		points[5] = p6;
-		Point.printPoints(new ConvexHull(points).getConvexHull());
-	}
 }
