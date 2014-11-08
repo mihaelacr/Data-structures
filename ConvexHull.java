@@ -25,7 +25,7 @@ public class ConvexHull {
 		for (int i = 1; i < n; i++) {
 			if (points[i].getY() < lowest_point.getY()) {
 				lowest_point = points[i];
-			} else if (points[i].getY() < lowest_point.getY()) {
+			} else if (points[i].getY() == lowest_point.getY()) {
 				if (points[i].getX() > lowest_point.getX())
 					lowest_point = points[i];
 			}
